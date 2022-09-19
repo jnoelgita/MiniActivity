@@ -69,7 +69,6 @@
               <th>PDF Documents</th>
               <th>Actions</th>
               </thead>
-}
                 <?php
                 $viewUser = new Users();
                 $row = $viewUser->fetchAllUser();
