@@ -63,7 +63,7 @@ function displayUsers(){
         <td>${user.pdf_file}</td>
         <td>
             <button class=btn  btn-md'>View</button>
-            <a href="deleteQuery.php" onclick='deleteRecord()'  class='btn btn-md'>Delete</a>
+            <a href="" id='deletebtn' class='btn btn-md'>Delete</a>
         </td>
     </tr>`;
   });
@@ -80,19 +80,7 @@ $(document).ready(function(){
   });
 });
 
+function 
 
-// $document.ready(function(){
-//     var studs;
-// });
 
-// function deleteRecord(studs) {
-//     var confirm_message = confirm("Are you sure you want to delete this?");
-//     if (confirm_message) {
-//         $.studs({
-//             success: function(){
-//                 table.fnDeleteRow( $('#accountTable tbody tr:eq(0)')[0] );
-//             }
-//         });
-//     }
-// }
 

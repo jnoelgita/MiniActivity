@@ -1,6 +1,7 @@
 <?php
+ include 'resource/php/conn.php';
  include 'resource/php/admintable.php';
- include 'resource/php/deleteQuery.php';
+ include 'resource/php/function.php';
 ?>
 
 <!doctype html>
@@ -76,6 +77,11 @@
                 $data = $viewUser->fetchAllUser();
                 ?>
                 <script type="text/javascript">var studs = <?php echo($data);?>;</script>
+                <script><?php
+                if (deletebtn.isPressed()){
+                  deleteRecords();
+                }
+                ?> </script>
               </tbody>
               </table>
             </div>

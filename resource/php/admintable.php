@@ -1,5 +1,5 @@
 <?php
- require_once 'conn.php';
+
 
 
 class Users {
@@ -12,6 +12,7 @@ class Users {
           $users = $data->fetch_all(MYSQLI_ASSOC);
           return(json_encode($users));
         }
-    }
+        mysqli_close($conn);
+      }
 }
 ?>

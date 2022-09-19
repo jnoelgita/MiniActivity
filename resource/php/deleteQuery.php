@@ -1,9 +1,16 @@
 <?php 
 
 function deleteRecords(){
-    $id = $_GET['id'];
     $conn = conn();
+    $id = $_GET['id'];
     $sql = mysqli_query("DELETE FROM `users` WHERE id = " .$id. "");
-    $data = $conn->query($sql);
+    
+    if($conn->query($sql)=== TRUE) {
+        $message = "Credentials Deleted Successfully";
+    } else {
+        $message = "Credentials Deleted Successfully";
+    }
+    echo "<script>alert('$message');</script>";
+    mysqli_close($conn);
 }
 ?>

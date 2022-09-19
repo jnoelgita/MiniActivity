@@ -1,8 +1,8 @@
 <?php
-    require 'conn.php';
-    $conn = conn();
+    
 
 function registerStudent(){
+        $conn = conn();
         $studentID = $_POST ['studentID'];
         $fname = $_POST ['firstname'];
         $mname = $_POST ['middlename'];
@@ -20,6 +20,20 @@ function registerStudent(){
         }
         echo "<script>alert('$message');</script>";
         mysqli_close($conn);
-    }
+}
+
+function deleteRecords(){
+  $conn = conn();
+  $id = $_GET['id'];
+  $sql = mysqli_query("DELETE FROM `users` WHERE id = " .$id. "");
+  
+  if($conn->query($sql)=== TRUE) {
+    $message = "Credentials Deleted Successfully";
+  } else {
+    $message = "Credentials Deleted Successfully";
+  }
+  echo "<script>alert('$message');</script>";
+  mysqli_close($conn);
+  }
 
 ?>
