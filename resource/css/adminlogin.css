@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+ background-color:#fff; 
+ color:#fff; 
+ font-family: "Fira Sans";
+ font-size: 20px;   
+ text-rendering: optimizeLegibility;
+ scroll-behavior: smooth;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+
+}
+
+header{
+min-height: 100vh;
+background-image: url(../img/bg.jpg);
+background-size: cover;
+background-position: center;
+background-repeat:no-repeat;
+}
+
+.navbar{ 
+    background-color:#000000;
+    opacity: 0.8;
+    
+}
+
+.navbar-nav {
+    margin-right: 40px;
+
+}
+
+.navbar .navbar-nav .nav-link{
+    margin-right: 10px;
+    text-transform:uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    color:#f5f5F5;
+} 
+
+.navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .nav-link:active  {
+    color:#f04e98; 
+    border-bottom:5px solid #f04e98;
+    transition: 0.9 ease;
+    text-decoration: none;
+}
+.logo {
+    margin-left: 50px;
+}
+
+.form-group {
+    text-transform: uppercase;
+    color: #151515;
+    font-size: 12px;
+    margin-top: 2px;   
+    margin: 0 auto;
+}
+
+.form-control {
+    font-size: 15px;
+    color: #151515;
+    width: 300px;
+    margin:0 auto;   
+    margin-bottom: 10px;
+}
+
+.form-control1 {
+    background-color: transparent;
+}   
+
+.btn {
+    margin: 0 auto;
+    color:#151515;
+    text-transform:uppercase;
+    font-weight: 500;   
+    background-color:#f04e98;
+    margin-bottom: 10px;
+    font-size: 15px;
+    width:370px;
+    
+}
+        
+.form-group .form-title {
+    font-weight: bolder;
+    font-size: 15px;
+
+
+}
+
+.header-title {
+    font-size: 40px;
+    color:#151515;
+}
+
+.card {
+    margin: 0 auto;   
+    color:#f5f5f5;
+    width: 40%;
+    padding: 20px;
+    margin-top: 20px;
+}
