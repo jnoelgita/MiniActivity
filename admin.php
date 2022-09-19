@@ -21,7 +21,7 @@
     <!-- Web Icon -->
     <link rel="icon" type="image/png" href="resource/img/apple-touch-icon.png">
 
-    
+
 
 
 
@@ -30,12 +30,12 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/b04d2a2a76.js" crossorigin="anonymous"></script>
-    
+
     <!-- Data Tables Script -->
-    
-    
+
+
  </head>
-  <body>  
+  <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
@@ -50,7 +50,7 @@
               <a class="nav-item nav-link" href="">Sign Up</a>
             </div>
           </div>
-        </div>  
+        </div>
       </nav>
 
     <section>
@@ -58,7 +58,7 @@
           <div class="col-12">
             <h1 class="header-title text-center mt-3 mb-5">List of Accounts</h1>
             <div class="table-responsive">
-              <table id="accountTable" class="table table-hover" width="100%"> 
+              <table id="accountTable" class="table table-hover" width="100%">
               <thead>
               <th>ID</th>
               <th>Student ID</th>
@@ -71,7 +71,8 @@
               </thead>
                 <?php
                 $viewUser = new Users();
-                $row = $viewUser->fetchAllUser();
+                $data = $viewUser->fetchAllUser();
+                $viewUser->displayUsers($data);
                 ?>
               </table>
             </div>
@@ -98,6 +99,6 @@
     });
   });
     </script>
-  
+
   </body>
 </html>
