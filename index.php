@@ -18,7 +18,7 @@
     <!-- JavaScript -->
     <script src="resource/js/script.js"></script>
   </head>
-  <body>  
+  <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
        <div class="container-fluid">
@@ -33,12 +33,12 @@
               <a class="nav-item nav-link" href="">Sign Up</a>
             </div>
           </div>
-        </div>  
+        </div>
       </nav>
 
       <section>
-      <form method="POST" action="resource/php/add_query.php">
-        <div class="container"> 
+      <form method="POST" action="">
+        <div class="container">
           <div class="card">
             <div class="card-body">
               <h1 class="header-title text-center">Registration Form</h1>
@@ -79,8 +79,13 @@
               </div>
               <!-- Row for Button -->
               <div class="row justify-content-center align-items-center mt-2">
-                  <div class="form-group col-md-4"> 
+                  <div class="form-group col-md-4">
                     <input type="submit" class="btn " name="submit" id="submit" placeholder=""></br>
+                    <?php
+                    if($_SERVER['REQUEST_METHOD']=='POST'){
+                      registerStudent();
+                    }
+                   ?>
                     <a href="adminlogin.php" class="btn">Admin</a>
                   </div>
                 </div>
@@ -89,7 +94,7 @@
         </div>
       </form>
     </header>
-      
+
 
 
 

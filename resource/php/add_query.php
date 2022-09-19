@@ -2,7 +2,7 @@
     require 'conn.php';
     $conn = conn();
 
-    if (isset($_POST['submit'])) {
+function registerStudent(){
         $studentID = $_POST ['studentID'];
         $fname = $_POST ['firstname'];
         $mname = $_POST ['middlename'];
@@ -14,16 +14,12 @@
 
         if (mysqli_query($conn, $sql)) {
            $message = "Credentials Registered Sucessfully";
-           echo "<script>alert('$message') ;</script>";
-            header("location: ../../index.php");
+
         } else {
-            header("location: ../../index.php");
+          $message = "Credentials Registered Unsucessfully";
         }
-
+        echo "<script>alert('$message');</script>";
         mysqli_close($conn);
-        
-        
     }
-    header("location: ../../index.php");
 
-?>  
+?>
