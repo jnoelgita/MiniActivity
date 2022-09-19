@@ -1,5 +1,6 @@
 <?php
  include 'resource/php/admintable.php';
+ include 'resource/php/deleteQuery.php';
 ?>
 
 <!doctype html>

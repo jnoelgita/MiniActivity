@@ -13,9 +13,11 @@
         $sql = "INSERT INTO `accounts`(`studentID`, `firstName`, `middleName`, `lastName`, `profile_pic`, `pdf_file`) VALUES ('$studentID','$fname','$mname','$lname', '$profPic', '$pdfFile')";
 
         if (mysqli_query($conn, $sql)) {
-            header("location: ../../index.php?error=Registered Successfully");
+           $message = "Credentials Registered Sucessfully";
+           echo "<script>alert('$message') ;</script>";
+            header("location: ../../index.php");
         } else {
-            header("location: ../../index.php?error=Registration Unsuccessful");
+            header("location: ../../index.php");
         }
 
         mysqli_close($conn);
