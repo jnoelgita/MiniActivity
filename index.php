@@ -1,4 +1,5 @@
 <?php
+require_once 'resource/php/conn.php';
 include 'resource/php/function.php';
 ?>
 <!doctype html>
@@ -26,21 +27,21 @@ include 'resource/php/function.php';
       <nav class="navbar navbar-expand-lg navbar-dark">
        <div class="container-fluid">
         <img src="resource/img/logo.png" alt=""
-          class="img-fluid logo" width="170" height="60">
+          class="img-fluid logo" width="100" height="60">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
               <a class="nav-item nav-link active" href="#">Home</a>
-              <a class="nav-item nav-link" href="">Sign Up</a>
+              <a class="nav-item nav-link" href="adminlogin.php">Admin Login</a>
             </div>
           </div>
         </div>
       </nav>
 
       <section>
-      <form method="POST" action="">
+      <form method="POST" action="" enctype="multipart/form-data">
         <div class="container">
           <div class="card">
             <div class="card-body">
@@ -86,10 +87,9 @@ include 'resource/php/function.php';
                     <input type="submit" class="btn " name="submit" id="submit" placeholder=""></br>
                     <?php
                     if($_SERVER['REQUEST_METHOD']=='POST'){
-                      registerStudent();
+                      registerStudent($_POST['studentID'],$_POST['firstname'],$_POST['middlename'], $_POST['lastname'],$_FILES['profPic'],$_FILES['pdfFile']);
                     }
-                   ?>
-                    <a href="adminlogin.php" class="btn">Admin</a>
+                   ?> 
                   </div>
                 </div>
             </div>

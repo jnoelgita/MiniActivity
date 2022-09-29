@@ -18,14 +18,14 @@ html {
 
 header{
 min-height: 100vh;
-background-image: url(../img/bg.jpg);
+background-color: #222831;
 background-size: cover;
 background-position: center;
 background-repeat:no-repeat;
 }
 
 .navbar{ 
-    background-color:#000000;
+    background-color:transparent;
     opacity: 0.8;
     
 }
@@ -66,7 +66,7 @@ background-repeat:no-repeat;
     color: #151515;
     width: 300px;
     margin:0 auto;   
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .form-control1 {
@@ -81,7 +81,7 @@ background-repeat:no-repeat;
     background-color:#f04e98;
     margin-bottom: 10px;
     font-size: 15px;
-    width:370px;
+    width: 300px;
     
 }
         
@@ -104,3 +104,21 @@ background-repeat:no-repeat;
     padding: 20px;
     margin-top: 20px;
 }
+
+.error {
+
+    background: #F2DEDE;
+ 
+    color: #0c0101;
+ 
+    padding: 10px;
+ 
+    width: 95%;
+ 
+    border-radius: 5px;
+ 
+    margin: 20px auto;
+ 
+ }
+ 
+ 

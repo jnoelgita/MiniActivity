@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>CEU Registration Form </title>
+    <title>Admin Login</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,54 +13,60 @@
     <link rel="stylesheet" href="resource/css/adminlogin.css">
 
     <!-- Web Icon -->
-    <link rel="icon" type="image/png" href="resource/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="resource/img/apple-touch-icon.png"> 
 
     <!-- JavaScript -->
-    <script src="resource/js/script.js"></script>
+  <script src="resource/js/script.js"></script>
   </head>
   <body>  
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-        <img src="resource/img/logo.png" alt=""
-          class="img-fluid logo" width="170" height="60">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link active" href="#">Home</a>
-              <a class="nav-item nav-link" href="">Sign Up</a>
+          <img src="resource/img/logo.png" alt="" class="img-fluid logo" width="100" height="60">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="#">Home</a>
+                <a class="nav-item nav-link" href="index.php">Register Student</a>
+              </div>
             </div>
-          </div>
         </div>  
       </nav>
 
-      <section>
-      <form method="POST" action="">
+    <section>
+      <form action="resource/php/login.php" method="POST" >
         <div class="container-fluid"> 
           <div class="card mt-4">
             <div class="card-body">
-              <h1 class="header-title text-center">Login Form</h1>
+              <h1 class="header-title text-center">Admin Login Form</h1>
+              <?php if (isset($_GET['error'])) { ?>
+
+              <p class="error"><?php echo $_GET['error']; ?></p>
+
+              <?php } ?>
               <div class="row justify-content-center align-items-center mt-3">
                 <div class="form-group col-md-8">
                   <label for="username" class="form-title">Username</label>
-                  <input type="text" class="form-control" name="studentID" placeholder="Username"autocomplete="off" pattern="[0-9]{4}-[0-9]{5}">
+                  <input type="text" class="form-control" name="username" placeholder="Username"autocomplete="off"">
                   <label for="password" class="form-title">Password</label>
-                  <input type="password" class="form-control" name="studentID" placeholder="Password"autocomplete="off">
+                  <input type="password" class="form-control" name="password" placeholder="Password" autocomplete="off">
                 </div>
+              </div>
               <!-- Row for Button -->
               <div class="row justify-content-center align-items-center">
                   <div class="form-group col-md-8"> 
-                    <button class="btn">Login</button>
+                    <button type="submit" class="btn">Login</button>
                     <a href="index.php" class="btn">Go Back</a>
                   </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
       </form>
-    </header>
+    </section>
+</header>
       
 
 

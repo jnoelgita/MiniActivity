@@ -59,11 +59,12 @@ function displayUsers(){
         <td>${user.firstName}</td>
         <td>${user.middleName}</td>
         <td>${user.lastName}</td>
-        <td>${user.profile_pic}</td>
+        <td><img src=${user.profile_pic}></td>
         <td>${user.pdf_file}</td>
         <td>
-            <button class=btn  btn-md'>View</button>
-            <a href="" id='deletebtn' class='btn btn-md'>Delete</a>
+
+        <a href='view.php?id=${user.id}' class="btn">View</a>
+
         </td>
     </tr>`;
   });
@@ -77,10 +78,6 @@ $(document).ready(function(){
       style: 'multi',
       selector: 'td:first-child'
     }
-  });
+  });   
 });
-
-function 
-
-
-
+    
